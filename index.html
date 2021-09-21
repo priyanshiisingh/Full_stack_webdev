@@ -8,28 +8,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        .background {
+        .parent {
             background-color: aqua;
-            width: 250px;
-            height: 250px;
             border: 2px solid black;
+            padding: 20px;
+            width: 80vw;
+        }
+        
+        .child {
+            background-color: purple;
+            height: 20px;
+            width: 80%;
         }
         
         * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-        }
-        
-        body {
-            background-color: black;
+            text-decoration: none;
         }
     </style>
 </head>
 
+<!--block level elements takes 100% of the parent element
+    
+    Pixels (px) - absolute units
+
+    Relative unit:
+    viewport height (vh) - sets according to the percenatge
+        of the viewport height (not of the parent)
+    viewport width (vw) - sets according to the percentage
+        of the viewport width (not of the parent)
+    Percentage (%) - scales element relative to its immediate
+        parent
+    
+    -->
+
 <body>
-    <div class="background">
-        Lorem ipsum
+    <div class="parent">
+        <div class="child">
+            Lorem ipsum
+        </div>
     </div>
 </body>
 
