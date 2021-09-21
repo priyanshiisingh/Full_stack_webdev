@@ -11,14 +11,11 @@
         .parent {
             background-color: aqua;
             border: 2px solid black;
-            padding: 20px;
-            width: 80vw;
+            height: 60%;
         }
         
-        .child {
-            background-color: purple;
-            height: 20px;
-            width: 80%;
+        body {
+            height: 80vh;
         }
         
         * {
@@ -30,25 +27,17 @@
     </style>
 </head>
 
-<!--block level elements takes 100% of the parent element
-    
-    Pixels (px) - absolute units
+<!--the body's height is not defined, therfore an empty 
+div will not take any percentage of the height
 
-    Relative unit:
-    viewport height (vh) - sets according to the percenatge
-        of the viewport height (not of the parent)
-    viewport width (vw) - sets according to the percentage
-        of the viewport width (not of the parent)
-    Percentage (%) - scales element relative to its immediate
-        parent
-    
-    -->
+we will need to add the height to the body first according 
+to the viewport height and then add height of the div using 
+percentage
+-->
 
 <body>
     <div class="parent">
-        <div class="child">
-            Lorem ipsum
-        </div>
+        lorem
     </div>
 </body>
 
