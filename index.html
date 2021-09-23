@@ -15,13 +15,7 @@
             box-sizing: border-box;
         }
         
-        div.parent h1 {
-            color: white;
-            background-color: cyan;
-        }
-        
-        div.parent h2 {
-            color: white;
+        div.parent div:nth-child(4) {
             background-color: green;
         }
     </style>
@@ -29,24 +23,23 @@
 </head>
 
 <!-- 
-    if your style changes according to the element make sure to use 
-    combined selectors
-    .big : universal style but changes according to the element
-
-    Child Selectors- allow parent to access any element inside it by 
-        defining a scope limited just to the parent
-
-        
+    nth child selector:
+        flexibility to select only one child from the parent
+        select the given position of child from the colletion of elements    
+    
 -->
 
 <body>
     <div class="parent">
         <div>i'm a div</div>
-        <h1>i'm h1</h1>
         <h2>i'm h2</h2>
-        <h1>i'm h1</h1>
-        <h2>i'm h2</h2>
+
         <div>i'm a div</div>
+        <div>i'm a div</div>
+        <h2>i'm h2</h2>
+        <h2>i'm h2</h2>
+        <h2>i'm h2</h2>
+
     </div>
 </body>
 
