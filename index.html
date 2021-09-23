@@ -15,24 +15,23 @@
             box-sizing: border-box;
         }
         
-        h2:nth-child(1) {
-            padding: 5px;
-            color: white;
-            background-color: cyan;
+        div.parent {
+            background-color: black;
+            min-height: 200px;
+        }
+        
+        div.child {
+            background-color: orange;
+            height: 100px;
+            width: 100px;
+            border-radius: 10%;
             transition-duration: 0.5s;
             transition-timing-function: linear;
         }
         
-        h2:nth-child(2) {
-            padding: 5px;
-            color: white;
-            background-color: orange;
-            transition-duration: 0.5s;
-            transition-timing-function: ease-in;
-        }
-        
-        h2:hover {
-            background-color: red;
+        div.parent:hover div.child {
+            background-color: brown;
+            transform: rotate(90deg);
         }
     </style>
 
@@ -44,11 +43,14 @@
             transition-duration: 0.5s;
             transition-timing-function: linear;
                                         ease-in;
+        
+        
 -->
 
 <body>
-    <h2>i'm h2</h2>
-    <h2>i'm h2</h2>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
 
 </html>
