@@ -15,32 +15,50 @@
             box-sizing: border-box;
         }
         
-        div.parent div:nth-child(4) {
+        h2 {
+            padding: 5px;
+            color: white;
+            background-color: orange;
+        }
+        
+        h2:hover {
+            background-color: red;
+            cursor: grab;
+        }
+        
+        div::selection {
             background-color: green;
+        }
+        
+        input:focus {
+            background-color: aquamarine;
+        }
+        
+        h2::before {
+            content: "i'm before";
+            background-color: aqua;
         }
     </style>
 
 </head>
 
-<!-- 
-    nth child selector:
-        flexibility to select only one child from the parent
-        select the given position of child from the colletion of elements    
-    
+<!-- Pseudo selectors
+        allows you to select elements depending upon their state
+        eg- :hover, ::selection, :focus
+
+    Before, After Pseudo selectors
+        after pseudo selector- adds content after our tags 
+        can control styles of the content with css
+        before pseudo selector- adds content before our tags 
+        can control styles of the content with css
+
 -->
 
 <body>
-    <div class="parent">
-        <div>i'm a div</div>
-        <h2>i'm h2</h2>
-
-        <div>i'm a div</div>
-        <div>i'm a div</div>
-        <h2>i'm h2</h2>
-        <h2>i'm h2</h2>
-        <h2>i'm h2</h2>
-
-    </div>
+    <h2>i'm h2</h2>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos autem consequatur dolorem quas alias numquam sunt deserunt necessitatibus libero eos excepturi aut consectetur quisquam reprehenderit quo repudiandae, id nesciunt odit minus maxime suscipit?
+        Voluptates pariatur, obcaecati corporis maxime incidunt illo error quo facere, autem sint sed animi sit magnam aut?</div>
+    <input type="text" />
 </body>
 
 </html>
