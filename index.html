@@ -15,52 +15,39 @@
             box-sizing: border-box;
         }
         
-        .background {
+        div.parent h1 {
             color: white;
-        }
-        
-        h1.background {
             background-color: cyan;
         }
         
-        h2.background {
-            background-color: yellowgreen;
-        }
-        
-        h3.background {
-            background-color: red;
-        }
-        
-        span.background {
-            background-color: orange;
-        }
-        
-        #second_h2.background {
-            background-color: brown;
+        div.parent h2 {
+            color: white;
+            background-color: green;
         }
     </style>
 
 </head>
 
-<!-- Combined Selectors
-        combining multiple selectors together
-        selecting items using elements and their class
-        first element name .class name h1.background
-        reuses class with various unfamiliar tags
-        use just classname and define properties you want to apply to 
-        all elements of that class
+<!-- 
+    if your style changes according to the element make sure to use 
+    combined selectors
+    .big : universal style but changes according to the element
 
-        assign id to similar tags the name can be same tho
+    Child Selectors- allow parent to access any element inside it by 
+        defining a scope limited just to the parent
+
+        
 -->
 
 <body>
-    <h1 class="background">heading 1</h1>
-    <h2 class="background">heading 2</h2>
-    <h2 id="second_h2" class="background">second heading 2</h2>
-
-    <h3 class="background">heading 3</h3>
-
-    <span class="background">Lorem ipsum dolor sit amet.</span>
+    <div class="parent">
+        <div>i'm a div</div>
+        <h1>i'm h1</h1>
+        <h2>i'm h2</h2>
+        <h1>i'm h1</h1>
+        <h2>i'm h2</h2>
+        <div>i'm a div</div>
+    </div>
 </body>
 
 </html>
