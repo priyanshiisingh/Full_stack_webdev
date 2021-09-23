@@ -11,49 +11,56 @@
     <style>
         * {
             padding: 0;
-            margin: 0;
+            margin: 10px;
             box-sizing: border-box;
         }
         
-        .parent {
-            min-height: 80vh;
-            position: relative;
-            background-color: black;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
+        .background {
+            color: white;
         }
         
-        .child {
-            width: 100px;
-            height: 150px;
-            margin: 5px;
+        h1.background {
+            background-color: cyan;
+        }
+        
+        h2.background {
+            background-color: yellowgreen;
+        }
+        
+        h3.background {
+            background-color: red;
+        }
+        
+        span.background {
             background-color: orange;
         }
+        
+        #second_h2.background {
+            background-color: brown;
+        }
     </style>
+
 </head>
 
-<!-- Flex Properties
-        flex-wrap:wrap
-            wraps elements into multiple lines in case of flex
+<!-- Combined Selectors
+        combining multiple selectors together
+        selecting items using elements and their class
+        first element name .class name h1.background
+        reuses class with various unfamiliar tags
+        use just classname and define properties you want to apply to 
+        all elements of that class
 
+        assign id to similar tags the name can be same tho
 -->
 
 <body>
-    <div class="parent">
-        <div class="child"></div>
-        <div class="child" style="background-color: red;"></div>
-        <div class="child" style="background-color: blue;"></div>
-        <div class="child" style="background-color: violet;"></div>
-        <div class="child"></div>
-        <div class="child" style="background-color: red;"></div>
-        <div class="child" style="background-color: blue;"></div>
-        <div class="child" style="background-color: violet;"></div>
-        <div class="child"></div>
-        <div class="child" style="background-color: red;"></div>
-        <div class="child" style="background-color: blue;"></div>
-        <div class="child" style="background-color: violet;"></div>
-    </div>
+    <h1 class="background">heading 1</h1>
+    <h2 class="background">heading 2</h2>
+    <h2 id="second_h2" class="background">second heading 2</h2>
+
+    <h3 class="background">heading 3</h3>
+
+    <span class="background">Lorem ipsum dolor sit amet.</span>
 </body>
 
 </html>
