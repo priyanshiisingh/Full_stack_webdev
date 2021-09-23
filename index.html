@@ -15,50 +15,40 @@
             box-sizing: border-box;
         }
         
-        h2 {
+        h2:nth-child(1) {
+            padding: 5px;
+            color: white;
+            background-color: cyan;
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+        }
+        
+        h2:nth-child(2) {
             padding: 5px;
             color: white;
             background-color: orange;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
         }
         
         h2:hover {
             background-color: red;
-            cursor: grab;
-        }
-        
-        div::selection {
-            background-color: green;
-        }
-        
-        input:focus {
-            background-color: aquamarine;
-        }
-        
-        h2::before {
-            content: "i'm before";
-            background-color: aqua;
         }
     </style>
 
 </head>
 
-<!-- Pseudo selectors
-        allows you to select elements depending upon their state
-        eg- :hover, ::selection, :focus
-
-    Before, After Pseudo selectors
-        after pseudo selector- adds content after our tags 
-        can control styles of the content with css
-        before pseudo selector- adds content before our tags 
-        can control styles of the content with css
-
+<!-- Transitions and animations: 
+        transitions: changing from one state to another state
+        transitions timings and names 
+            transition-duration: 0.5s;
+            transition-timing-function: linear;
+                                        ease-in;
 -->
 
 <body>
     <h2>i'm h2</h2>
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos autem consequatur dolorem quas alias numquam sunt deserunt necessitatibus libero eos excepturi aut consectetur quisquam reprehenderit quo repudiandae, id nesciunt odit minus maxime suscipit?
-        Voluptates pariatur, obcaecati corporis maxime incidunt illo error quo facere, autem sint sed animi sit magnam aut?</div>
-    <input type="text" />
+    <h2>i'm h2</h2>
 </body>
 
 </html>
