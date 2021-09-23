@@ -20,9 +20,8 @@
             position: relative;
             background-color: black;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
         }
         
         .child {
@@ -35,21 +34,21 @@
 </head>
 
 <!-- Flex Properties
-        flex-direction: row (puts elements in a row in a flexbox)
-            column (puts elements in a column in a flexbox)
-            row-reverse, column-reverse
-        
-        Justify-content: center, end, start
-            aligns elements according to the direction of the primary axis 
+        flex-wrap:wrap
+            wraps elements into multiple lines in case of flex
 
-        Align-items: center, end, start, flexend etc
-            aligns items according to the direction of the secondary axis
-                        
-                        
 -->
 
 <body>
     <div class="parent">
+        <div class="child"></div>
+        <div class="child" style="background-color: red;"></div>
+        <div class="child" style="background-color: blue;"></div>
+        <div class="child" style="background-color: violet;"></div>
+        <div class="child"></div>
+        <div class="child" style="background-color: red;"></div>
+        <div class="child" style="background-color: blue;"></div>
+        <div class="child" style="background-color: violet;"></div>
         <div class="child"></div>
         <div class="child" style="background-color: red;"></div>
         <div class="child" style="background-color: blue;"></div>
