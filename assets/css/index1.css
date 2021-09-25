@@ -4,27 +4,6 @@
     box-sizing: border-box;
 }
 
-div.parent {
-    height: 500px;
-    background-color: #111;
-}
-
-div.child {
-    width: 100px;
-    height: 100px;
-    background-color: #ffbf00;
-}
-
-div.parent:hover div.child {
-    animation: 1s move ease;
-    animation-fill-mode: forwards;
-}
-
-@keyframes move {
-    0% {
-        transform: translateX(0vw);
-    }
-    100% {
-        transform: translateX(80vw);
-    }
+header {
+    background-image: url('assets\images\day.jpeg');
 }
