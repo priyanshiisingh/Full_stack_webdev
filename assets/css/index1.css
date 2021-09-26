@@ -9,12 +9,91 @@
     color: unset;
 }
 
+
+/*header styles*/
+
 header {
     background-image: url('../images/day.jpeg');
     height: 300px;
     background-size: cover;
     background-position: center;
 }
+
+
+/*main body styles*/
+
+.main {
+    position: absolute;
+    top: 100px;
+    left: 580px;
+    border: 1px solid black;
+    min-height: 10px;
+    width: 450px;
+}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.dl_button {
+    background-color: white;
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    padding: 5px;
+    justify-content: flex-start;
+    display: flex;
+}
+
+.dl_btn {
+    background-color: #FFCF00;
+    border-radius: 50%;
+    border-style: none;
+    height: 25px;
+    width: 25px;
+}
+
+.main_insert {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.addtask_btn,
+.clr_btn {
+    width: 40px;
+}
+
+.main_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.taskbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.task_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+
+/*footer styles*/
 
 img.social_icons {
     width: 20px;
