@@ -1,6 +1,9 @@
-//declaring variables
+//ARRAYS
 
+var arr = [1, 2, 3, 4, 'hello'];
+console.log(typeof arr);
 
-var age = null;
-console.log(typeof age);
-//console.log(pr);
+console.log(arr.length);
+
+arr.push(5);
+console.log(arr.length);
