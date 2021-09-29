@@ -20,7 +20,23 @@ header {
 }
 
 
+/*dark mode settings*/
+
+
 /*main body styles*/
+
+.dl_btn,
+.addtask_btn,
+.taskbar>p,
+.task_status>button,
+.clr_btn,
+.checkbutton,
+.item>ul,
+.list_tools,
+.author_name,
+.social>a:hover {
+    cursor: pointer;
+}
 
 .mainsec {
     display: flex;
@@ -56,7 +72,7 @@ header {
     height: 35px;
     border-radius: 10px;
     padding: 5px;
-    justify-content: flex-start;
+    justify-content: space-between;
     display: flex;
 }
 
@@ -66,6 +82,12 @@ header {
     border-style: none;
     height: 25px;
     width: 25px;
+}
+
+.dl_btn:focus {
+    transform: translateX(30px);
+    transition: 0.5s ease-in 0.2s;
+    background-color: crimson;
 }
 
 .main_insert {
@@ -78,12 +100,16 @@ header {
 }
 
 .main_insert>input {
-    border-radius: 5px;
-    border-style: none;
+    border: 0px;
     height: 20px;
     font-size: 1.2rem;
     flex-grow: 1;
     margin-left: 15px;
+}
+
+.main_insert>input:focus {
+    outline: none;
+    border: none;
 }
 
 .main_insert>button {
@@ -104,12 +130,12 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(245, 244, 244);
-    border-radius: 5px;
+    border-top-left-radius: 10px;
 }
 
 .taskbar {
-    margin: 10px 25px 5px 10px;
-    width: 100%;
+    margin: 10px 0px 5px 10px;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,8 +178,8 @@ header {
 }
 
 .items {
-    margin: 5px 25px 5px 2px;
-    width: 100%;
+    margin: 5px 0px 5px 10px;
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -162,6 +188,11 @@ header {
     border-style: none;
     height: 40px;
     padding: 5px;
+}
+
+.forscroll {
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
 .checkbutton {
@@ -215,18 +246,21 @@ header {
     color: black;
 }
 
-.item>p {
+.item>ul {
     color: rgb(110, 107, 107);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.task_status>button:hover {
+    color: blue;
+}
+
+.clr_btn:hover {
+    color: red;
 }
 
 
 /*footer styles*/
-
-img.social_icons {
-    width: 20px;
-    margin: 0 10px;
-}
 
 footer {
     position: absolute;
@@ -239,4 +273,23 @@ footer {
     padding: 10px;
     font-size: 1.2rem;
     width: 100%;
+}
+
+.social {
+    margin-right: 10px;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+i.fa-instagram {
+    color: rgb(137, 5, 170);
+}
+
+i.fa-linkedin-in {
+    color: rgb(39, 39, 245);
+}
+
+i.fa-github {
+    color: black;
 }
