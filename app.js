@@ -1,22 +1,16 @@
 var heading = document.getElementById('heading')
-var para = document.getElementsByClassName('para')
-var tags = document.getElementsByTagName('a')
-var qs = document.querySelector('#heading')
-var qs2 = document.querySelector('.para')
-var qs3 = document.querySelectorAll('.para')
-
+var body = document.querySelector('body')
 
 console.log(heading)
-console.log(para[0])
-console.log(para[1])
-console.log(para.length)
-console.log(para)
-console.log(tags)
-console.log(qs)
-console.log(qs2)
-console.log(qs3)
 
-//para.push("hello") wont work
+heading.innerHTML = "i was added by js "
+heading.style = "color:red; fontsize:5rem;"
+console.log(heading.classList) //shows all the class heading has
 
-//getelementbyid returns single object whereas getelementsbyclassname 
-//returns all collection of all the objects of the specified class
+heading.classList.add('five')
+heading.classList.remove('one')
+
+console.log(heading.classList)
+
+body.classList.add('dark') //dark mode on
+body.classList.remove('dark'); //dark mode off
