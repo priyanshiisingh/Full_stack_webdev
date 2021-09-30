@@ -1,19 +1,19 @@
-//call back function
-//it means that foreach is implicitly calling the callback function that's y we do not need to call it explicitly?
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
 
+//const callbackfuntion = (event) => {
+//    console.log(event.target)
+//    console.log(input.value)
 
-var arr = ['gym', 'cook', 'eat']
-
-//for (var i = 0; i <= arr.length; i++) {
-//   console.log(arr[i])
 //}
 
-var callbaclfunction = (ele, mystry) => {
-    console.log(ele, mystry)
+const callbackfuntion = (event) => {
+    const inputvalue = input.value
+    const element = document.createElement('li')
+    const textnode = document.createTextNode(inputvalue)
+    element.appendChild(textnode)
+    list.appendChild(element)
 }
 
-arr.forEach(callbaclfunction)
-
-arr.forEach((element, index) => {
-    console.log(element, index)
-})
+button.addEventListener("click", callbackfuntion)
