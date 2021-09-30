@@ -49,3 +49,10 @@ var greet34 = (name = 'John', age = 99) => {
     return profile
 
 }
+
+var add = (a, b) => a + b
+console.log(add(10, 20))
+
+
+const meet = (name) => 'hi' + name
+console.log(meet("prii"))
