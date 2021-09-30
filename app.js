@@ -13,3 +13,7 @@ var callbaclfunction = (ele, mystry) => {
 }
 
 arr.forEach(callbaclfunction)
+
+arr.forEach((element, index) => {
+    console.log(element, index)
+})
