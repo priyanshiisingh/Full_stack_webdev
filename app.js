@@ -1,23 +1,24 @@
-var button = document.querySelector('button')
-var body = document.querySelector('body')
+const a = document.querySelectorAll('input')[0]
+const b = document.querySelectorAll('input')[1]
 
-//const callbackfuntion = (event) => {
-//    console.log(event.target)
-//    console.log(input.value)
+const add = document.querySelector('#add')
+const multiply = document.querySelector('#multiply')
 
-//}
+const resultbox = document.querySelector('.result')
 
-const callbackfuntion = (event) => {
+console.log(a, b, add, multiply)
 
-    body.classList.toggle('dark')
+const sum = () => {
+    const result = parseInt(a.value) + parseInt(b.value)
+    resultbox.innerHTML = result
 
-
-
-    /*const inputvalue = input.value
-    const element = document.createElement('li')
-    const textnode = document.createTextNode(inputvalue)
-    element.appendChild(textnode)
-    list.appendChild(element)*/
 }
 
-button.addEventListener("click", callbackfuntion)
+const multi = () => {
+    const result = parseInt(a.value) * parseInt(b.value)
+    resultbox.innerHTML = result
+
+}
+
+add.addEventListener('click', sum)
+multiply.addEventListener('click', multi)
