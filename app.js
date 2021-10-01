@@ -1,8 +1,39 @@
-var arr = [1, 2, 3, 4, 5, 6, 7, 8]
+var button = document.querySelector('button')
+var input = document.querySelector('input')
+var list = document.querySelector('ul')
 
-arr.splice(3, 1)
-    //element index and number of elements we want to remove
-    //modifies the original array does not create a new like in slice
-    // slice just removes first elemnet this removes specified index element
+var chores = []
 
-console.log(arr)
+var deleteItem = (value) => {
+    const index = chores.indexOf(value)
+    chores.splice(index, 1)
+    console.log(chores)
+}
+
+//console.log(chores.includes('gym'))
+// checks if entry already in the array
+
+const callbackfunc = (event) => {
+    // console.log(input.value)
+
+    const inputValue = input.value
+    if (chores.includes(input.value)) {
+        console.log('already exists')
+    } else {
+        const inputValue = input.value
+        chores.push(inputValue)
+        const element = document.createElement('li')
+        const textNode = document.createTextNode(inputValue)
+        element.appendChild(textNode)
+        list.appendChild(element)
+            //element.addEventListener('click', (e) => { deleteItem(console.log(e.target.innerHTML)) })
+        element.addEventListener('click', (e) => {
+            console.log(e.target.remove)
+        })
+
+    }
+}
+
+// to remove the element use e.target.remove
+
+button.addEventListener('click', callbackfunc)
