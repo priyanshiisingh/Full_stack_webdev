@@ -7,4 +7,4 @@ let car = {
 };
 
 car.print('ferrari')
-console.log(car.Name)
+console.log(car)
