@@ -1,7 +1,4 @@
 //Promises 
-setTimeout(() => {
-    console.log('prii')
-}, 0)
+var data = fetch('https://jsonplaceholder.typicode.com/todos/10')
 
-console.log('hi')
-console.log('hey')
+console.log(data)
