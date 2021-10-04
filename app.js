@@ -1,8 +1,9 @@
 let car = {
     Name: 'class c',
     manufacturer: 'mercedes',
-    print: function(a) {
-        console.log(car.manufacturer)
+    print: () => {
+        console.log(this)
+        console.log(`this is andnkjsa ${this.Name} asnkjdfskhf ${this.manufacturer}`)
     }
 };
 
