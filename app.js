@@ -1,15 +1,7 @@
-let car = {
-    Name: 'class c',
-    manufacturer: 'mercedes',
-    print: () => {
-        console.log(this)
-        console.log(`this is andnkjsa ${car.Name} asnkjdfskhf ${car.manufacturer}`)
-    }
-};
+//Promises 
+setTimeout(() => {
+    console.log('prii')
+}, 0)
 
-car.print()
-console.log(car)
-console.log(Object)
-console.log(Object.values(car))
-console.log(Object.keys(car))
-    //
+console.log('hi')
+console.log('hey')
