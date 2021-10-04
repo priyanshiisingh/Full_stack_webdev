@@ -2,9 +2,8 @@ let car = {
     Name: 'class c',
     manufacturer: 'mercedes',
     print: function(a) {
-        console.log(a)
+        console.log(car.manufacturer)
     }
 };
 
-car.print('ferrari')
-console.log(car)
+car.print()
