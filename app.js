@@ -3,14 +3,17 @@
 //     })
 //data is not a keyword
 
-let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
-    let parseddata = data.json()
-    console.log(parseddata)
-    return parseddata
-}).then(res => { console.log(res) })
+// let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
+//     let parseddata = data.json()
+//     console.log(parseddata)
+//     return parseddata
+// }).then(res => { console.log(res) })
+
+let response = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => { console.log(data) })
 
 // then alays returns a promise, .then only runs once promise is fulfilled
-//
+//.then provides data stream json convert it into object and second .then 
+//we can access the functions
 
 // let response = fetch('https://jsonplaceholder.typicode.com/users ')
 
