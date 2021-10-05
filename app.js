@@ -1,14 +1,22 @@
-console.log('one')
-console.log('one2')
+// setTimeout(() => {
+//     console.log('timer1')
+// }, 0);
 
+
+// for (var i = 0; i < 1000; i++) {
+//     console.log(i)
+// }
+
+//PROMISES
+
+let value = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject('hello')
+    }, 4000);
+})
+
+console.log(value)
 
 setTimeout(() => {
-    console.log('timer2')
-}, 1000);
-setTimeout(() => {
-    console.log('timer1')
-}, 2000);
-
-
-console.log('one3')
-console.log('one4')
+    console.log(value)
+}, 4000);
