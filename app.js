@@ -1,22 +1,42 @@
+// let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
+//         console.log(data)
+//     })
+//data is not a keyword
+
+let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
+    let parseddata = data.json()
+    console.log(parseddata)
+    return parseddata
+}).then(res => { console.log(res) })
+
+// then alays returns a promise, .then only runs once promise is fulfilled
+//
+
+// let response = fetch('https://jsonplaceholder.typicode.com/users ')
+
+// console.log(response)
+
+//returns us a promise 
+
+// let data = fetch('https://jsonplaceholder.typicode.com/users')
 // setTimeout(() => {
-//     console.log('timer1')
-// }, 0);
+//     console.log(data)
+// }, 2000);
+// console.log(data)
 
+//output promise{<fulfilled>:response}
 
-// for (var i = 0; i < 1000; i++) {
-//     console.log(i)
-// }
+//to conevert a stream into response data 
 
-//PROMISES
+// setTimeout(() => {
+//     console.log(response)
+//     const data = response.json //json function converts stream into data
+//     console.log(data)
 
-let value = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject('hello')
-    }, 4000);
-})
+// }, 2000);
 
-console.log(value)
-
-setTimeout(() => {
-    console.log(value)
-}, 4000);
+// setTimeout(() => {
+//     const data = response
+//     console.log(data)
+//     console.log(data.json())
+// }, 2000);
