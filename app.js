@@ -6,7 +6,18 @@ const tab = document.querySelector('table')
 //     }, 3000);
 // }).then((data) => {
 //     console.log(data)
-// })
+//
+
+const createrow = ((user) => {
+    let newrow = document.createElement('tr')
+    let template = `
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.username}</td>`
+    newrow.innerHTML = template
+    return newrow
+})
 
 let response = fetch('https://jsonplaceholder.typicode.com/users').then((res) => {
     let parseddata = res.json()
@@ -14,14 +25,14 @@ let response = fetch('https://jsonplaceholder.typicode.com/users').then((res) =>
 }).then((data) => {
     console.log(data)
     data.forEach((user) => {
-        let newrow = document.createElement('tr')
-        let template = `
-        <td>${user.id}</td>
-        <td>${user.name}</td>
-        <td>${user.email}</td>
-        <td>${user.username}</td>`
-        newrow.innerHTML = template
-        tab.appendChild(newrow)
+        // let newrow = document.createElement('tr')
+        // let template = `
+        // <td>${user.id}</td>
+        // <td>${user.name}</td>
+        // <td>${user.email}</td>
+        // <td>${user.username}</td>`
+        // newrow.innerHTML = template
+        tab.appendChild(createrow(user))
     })
 })
 
