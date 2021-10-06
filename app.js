@@ -1,29 +1,26 @@
-// let response = fetch('https://jsonplaceholder.typicode.com/users').then((res) => {
-//     let parseddata = res.json()
-//     return (parseddata)
-// }).then((data) => {
-//     console.log(data)
-//     data.forEach(user => {
-//         console.log(data)
-//     })
-// })
+// enters user input into the console
+const input = document.querySelector('input')
+const button = document.querySelector('button')
 
-//Async Await
+const getdata = async(item) => {
+    console.log(item)
+    const url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
 
-// const response = await fetch('https://jsonplaceholder.typicode.com/users')
-
-// const data = await response.json()
-
-// console.log(data)
-
-//output: error
+    const res = await fetch(url)
+    const data = await res.json()
+    console.log(data.hits)
+}
 
 
-const fetchdata = (async() => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users')
-    console.log(response)
-    const data = await response.json()
-    console.log(data)
+button.addEventListener('click', (e) => {
+    getdata(input.value)
 })
 
-fetchdata()
+
+// var input = document.querySelector('input')
+// const add=document.querySelector('button')
+// add.addEventListener('click', (event)=>{
+
+//   console.log(input.value)})
+
+//data.hits.foreach
