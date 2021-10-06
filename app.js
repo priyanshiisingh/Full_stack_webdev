@@ -1,26 +1,18 @@
-// enters user input into the console
 const input = document.querySelector('input')
 const button = document.querySelector('button')
 
+const item = input.value
 const getdata = async(item) => {
-    console.log(item)
-    const url = `https://api.edamam.com/search?app_id=bd51454f&app_key=3b359328e30cad3141319969dfedaba9&q=${item}`
+    const url = `https://api.edamam.com/search?app_id=99aea339&app_key=5b5baf66440f0b0d1299647cdc02e53e&q=${item}`
 
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data.hits)
+        // console.log(data.hits)
+    data.hits.forEach(recipe => {
+        console.log(recipe)
+    })
 }
-
 
 button.addEventListener('click', (e) => {
     getdata(input.value)
 })
-
-
-// var input = document.querySelector('input')
-// const add=document.querySelector('button')
-// add.addEventListener('click', (event)=>{
-
-//   console.log(input.value)})
-
-//data.hits.foreach
