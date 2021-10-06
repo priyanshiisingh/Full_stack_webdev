@@ -1,45 +1,53 @@
-// let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
-//         console.log(data)
-//     })
-//data is not a keyword
+const tab = document.querySelector('table')
 
-// let response = fetch('https://jsonplaceholder.typicode.com/users').then(data => {
-//     let parseddata = data.json()
-//     console.log(parseddata)
-//     return parseddata
-// }).then(res => { console.log(res) })
-
-let response = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()).then(data => { console.log(data) })
-
-// then alays returns a promise, .then only runs once promise is fulfilled
-//.then provides data stream json convert it into object and second .then 
-//we can access the functions
-
-// let response = fetch('https://jsonplaceholder.typicode.com/users ')
-
-// console.log(response)
-
-//returns us a promise 
-
-// let data = fetch('https://jsonplaceholder.typicode.com/users')
-// setTimeout(() => {
+// let promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("hello world")
+//     }, 3000);
+// }).then((data) => {
 //     console.log(data)
-// }, 2000);
-// console.log(data)
+// })
 
-//output promise{<fulfilled>:response}
+let response = fetch('https://jsonplaceholder.typicode.com/users').then((res) => {
+    let parseddata = res.json()
+    return (parseddata)
+}).then((data) => {
+    console.log(data)
+    data.forEach((user) => {
+        let newrow = document.createElement('tr')
+        let template = `
+        <td>${user.id}</td>
+        <td>${user.name}</td>
+        <td>${user.email}</td>
+        <td>${user.username}</td>`
+        newrow.innerHTML = template
+        tab.appendChild(newrow)
+    })
+})
 
-//to conevert a stream into response data 
 
-// setTimeout(() => {
-//     console.log(response)
-//     const data = response.json //json function converts stream into data
-//     console.log(data)
+// })
 
-// }, 2000);
+// let dataid = document.createElement('td')
+//         let dataidtextnode = document.createTextNode(user.id)
+//         dataid.appendChild(dataidtextnode)
+//         newrow.appendChild(dataid)
+//         tab.appendChild(newrow)
+// append_data=(element) => {
+//     const element = document.createElement('li')
+//     userdetail=element['name'] + element['username']
+//     const textnode = document.createTextNode(userdetail)
+//     element.appendChild(textnode)
+//     console.log(element)
+//     list.appendChild(element)
+// }
+// console.log(arr)
 
-// setTimeout(() => {
-//     const data = response
-//     console.log(data)
-//     console.log(data.json())
-// }, 2000);
+
+
+
+// const element = document.createElement('li')
+//     const textnode = document.createTextNode(data)
+//     element.appendChild(textnode)
+//     console.log(element)
+//     list.appendChild(element)
