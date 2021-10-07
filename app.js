@@ -1,8 +1,6 @@
 const input = document.querySelector('input')
 const button = document.querySelector('button')
-let itemname = document.querySelector('h5')
-let itemimage = document.querySelector('img')
-let itemrecipe = document.querySelector('a')
+
 
 const parent = document.querySelector('div.grid')
 
@@ -42,6 +40,7 @@ const getdata = async(item) => {
 }
 
 button.addEventListener('click', (e) => {
+    parent.innerHTML = ''
     getdata(input.value)
 })
 
