@@ -36,15 +36,17 @@ const inputbutton_callback = (iteminput) => {
 
 }
 
+var arr = []
 inputbutton.addEventListener('click', (e) => {
-    inputbutton_callback(input.value)
+
+    arr.push(inputbutton_callback(input.value))
+        // inputbutton_callback(input.value)
+    console.log(arr)
+
 })
 
 //delete item
-deletebutton.addEventListener('click', (answer) => {
-    window.prompt('do you want to delete task? Y/N')
-    if (answer = 'Y') {
-        console.log(gparent.target.remove)
-    }
-
+deletebutton.addEventListener('click', (e) => {
+    arr.splice(e.target, 1)
+    console.log(arr)
 })
