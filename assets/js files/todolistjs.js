@@ -4,6 +4,7 @@ const input = document.querySelector('input')
 const inputbutton = document.querySelector('.addtask_btn')
 const parent = document.querySelector('.list_items')
 const gparent = document.querySelector('.forscroll')
+const deletebutton = document.querySelector('.fa-times')
 
 //dark light mode toggling
 const dlbutton_callbackfuntion = (() => {
@@ -19,9 +20,7 @@ const inputbutton_callback = (iteminput) => {
                     <i class="fa fa-check-circle"></i>
                 </div>
                 <div class="item">
-                    <ul>
-                        <li>${input.value}</li>
-                    </ul>
+                    <p>${input.value}<p>   
                 </div>
                 <div class="list_tools">
                     <i class="fa fa-times"></i>
@@ -34,8 +33,18 @@ const inputbutton_callback = (iteminput) => {
     console.log(newitem)
     newi = parent.appendChild(newitem)
     gparent.appendChild(newi)
+
 }
 
 inputbutton.addEventListener('click', (e) => {
     inputbutton_callback(input.value)
+})
+
+//delete item
+deletebutton.addEventListener('click', (answer) => {
+    window.prompt('do you want to delete task? Y/N')
+    if (answer = 'Y') {
+        console.log(gparent.target.remove)
+    }
+
 })

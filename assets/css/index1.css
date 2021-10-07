@@ -58,7 +58,7 @@ body.dark .main_insert {
 .task_status>button,
 .clr_btn,
 .checkbutton,
-.item>ul,
+.item>p,
 .list_tools,
 .author_name,
 .social>a:hover {
@@ -256,9 +256,11 @@ body.dark .items {
 .item {
     margin-left: 10px;
     flex-grow: 1;
+    color: rgb(110, 107, 107);
+    font-size: 1.1rem;
 }
 
-body.dark .item>ul {
+body.dark .item {
     color: white;
 }
 
@@ -301,11 +303,6 @@ body.dark .item>ul {
 
 .list_tools>.fa-bars:hover {
     color: black;
-}
-
-.item>ul {
-    color: rgb(110, 107, 107);
-    font-size: 1.1rem;
 }
 
 .task_status>button:hover {
