@@ -42,7 +42,6 @@ const inputbutton_callback = (iteminput) => {
 
 // arr.forEach(inputbutton_callback)
 inputbutton.addEventListener('click', (e) => {
-    parent.innerHTML = ""
     inputbutton_callback(input.value)
     arr.push(inputbutton_callback)
     console.log(arr)
