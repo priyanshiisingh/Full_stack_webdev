@@ -160,7 +160,6 @@ body.dark .main_insert {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(245, 244, 244);
-    border-top-left-radius: 10px;
 }
 
 body.dark .main_list {
@@ -247,6 +246,11 @@ body.dark .items {
     max-height: 350px;
     overflow-y: scroll;
     background-color: rgb(245, 244, 244);
+    border-top-left-radius: 10px;
+}
+
+body.dark .forscroll {
+    background-color: #181717;
 }
 
 .checkbutton {
