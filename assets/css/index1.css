@@ -244,8 +244,9 @@ body.dark .items {
 }
 
 .forscroll {
-    max-height: 500px;
+    max-height: 350px;
     overflow-y: scroll;
+    background-color: rgb(245, 244, 244);
 }
 
 .checkbutton {

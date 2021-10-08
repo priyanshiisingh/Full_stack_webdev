@@ -38,11 +38,8 @@ const inputbutton_callback = (iteminput) => {
 
 var arr = []
 inputbutton.addEventListener('click', (e) => {
-
-    arr.push(inputbutton_callback(input.value))
-        // inputbutton_callback(input.value)
-    console.log(arr)
-
+    parent.innerHTML = ""
+    inputbutton_callback(input.value)
 })
 
 //delete item
