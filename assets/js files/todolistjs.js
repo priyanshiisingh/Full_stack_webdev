@@ -13,9 +13,13 @@ const dlbutton_callbackfuntion = (() => {
 dlbutton.addEventListener('click', dlbutton_callbackfuntion)
 
 //input into list
+var arr = []
 iteminput = input.value
 const inputbutton_callback = (iteminput) => {
-    const template = `
+    if (arr.includes(iteminput) == true) {
+        prompt("already exsits")
+    } else {
+        const template = `
                 <div class="checkbutton">
                     <i class="fa fa-check-circle"></i>
                 </div>
@@ -27,20 +31,24 @@ const inputbutton_callback = (iteminput) => {
                     <i class="fas fa-bars"></i>
                 </div>
                 `
-    const newitem = document.createElement('div')
-    newitem.setAttribute('class', 'items')
-    newitem.innerHTML = template
-    console.log(newitem)
-    newi = parent.appendChild(newitem)
-    gparent.appendChild(newi)
-
+        const newitem = document.createElement('div')
+        newitem.setAttribute('class', 'items')
+        newitem.innerHTML = template
+        console.log(newitem)
+        newi = parent.appendChild(newitem)
+        gparent.appendChild(newi)
+    }
 }
 
-var arr = []
+// arr.forEach(inputbutton_callback)
 inputbutton.addEventListener('click', (e) => {
     parent.innerHTML = ""
     inputbutton_callback(input.value)
+    arr.push(inputbutton_callback)
+    console.log(arr)
 })
+
+console.log(arr)
 
 //delete item
 deletebutton.addEventListener('click', (e) => {
