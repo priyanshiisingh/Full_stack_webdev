@@ -49,8 +49,17 @@ inputbutton.addEventListener('click', (e) => {
 
 console.log(arr)
 
+// deletebutton.addEventListener('click', (e) => {
+//     arr.splice(e, 1)
+//     console.log(e.target.remove)
+// })
+
 //delete item
-deletebutton.addEventListener('click', (e) => {
-    arr.splice(e.target, 1)
-    console.log(arr)
-})
+// deletebutton.addEventListener('click', (e) => {
+//     delete_callbackfunc(e)
+//     console.log(arr)
+// })
+
+// element.addEventListener('click', (e) => {
+//     console.log(e.target.remove)
+// })
