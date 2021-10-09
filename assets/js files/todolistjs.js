@@ -16,8 +16,8 @@ dlbutton.addEventListener('click', dlbutton_callbackfuntion)
 var arr = []
 iteminput = input.value
 const inputbutton_callback = (iteminput) => {
-    if (arr.includes(iteminput) == true) {
-        prompt("already exsits")
+    if (arr.includes(iteminput) === true) {
+        alert("already exsits")
     } else {
         const template = `
                 <div class="checkbutton">
@@ -37,13 +37,13 @@ const inputbutton_callback = (iteminput) => {
         console.log(newitem)
         newi = parent.appendChild(newitem)
         gparent.appendChild(newi)
+        arr.push(`${input.value}`)
     }
 }
 
 // arr.forEach(inputbutton_callback)
 inputbutton.addEventListener('click', (e) => {
     inputbutton_callback(input.value)
-    arr.push(inputbutton_callback)
     console.log(arr)
 })
 
