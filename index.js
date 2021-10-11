@@ -1,11 +1,6 @@
-//path module 
+const fs = require('fs')
 
-const path = require('path')
-
-console.log(path.join(__dirname, 'app.js'))
-
-// console.log(__dirname)
-// console.log(path.dirname('. / temp / app.js '))
-// console.log(path.extname('./app.js'))
-// console.log(path.resolve('./app.js'))
-// console.log(path.relative('/', '././temp/app.js'))
+fs.readFile('./text.txt', (data, error) => {
+    if (error) console.log(error)
+    else console.log(data)
+})
