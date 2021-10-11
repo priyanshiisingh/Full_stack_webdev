@@ -1,29 +1,17 @@
-// const greet = (() => {
-//     console.log('hi')
+const button = document.querySelector('button')
+const input = document.querySelector('input')
+const div = document.querySelector('div')
+
+const arr = [1, 2, 3, 4, 5]
+localStorage.setItem('val', JSON.stringify(arr))
+console.log(JSON.parse(localStorage.getItem('val')))
+
+
+
+// button.addEventListener('click', (req, res) => {
+//     localStorage.setItem('inputvalue', [1, 2, 3, 4, 5])
+//     div.innerHTML = input.value
+
 // })
 
-// module.exports.greet = greet
-// console.log('i am index.js')
-
-const add = () => {
-    console.log('i add stuff')
-}
-
-const subtract = () => {
-    console.log('i sbtract stuff')
-}
-
-const product = () => {
-    console.log('i multiply stuff')
-}
-
-const divide = () => {
-    console.log('i divide stuff')
-}
-
-module.exports.add = add
-module.exports.subtract = subtract
-module.exports.product = product
-module.exports.divide = divide
-
-// console.log(module.exports)
+// console.log(localStorage.getItem(inputvalue))
