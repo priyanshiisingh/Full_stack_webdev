@@ -5,11 +5,16 @@ const fs = require('fs')
 //     else console.log(data)
 // })
 
-console.log(fs.readFileSync('./text.txt', 'utf8'))
+// console.log(fs.readFileSync('./text.txt', 'utf8'))
 
 // fs.readFile('./text.txt', (error, data) => {
 //     if (error) console.log(error)
 //     else console.log(data.toString)
 // })
+
+fs.writeFile('./text.txt', 'new data', (error, data) => {
+    if (error) console.log(error)
+    else console.log(data)
+})
 
 console.log('abc')
