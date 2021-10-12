@@ -1,10 +1,12 @@
 {
-    "name": "payment-gateway",
+    "name": "full_stack_webdev",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js",
+        "dev": "nodemon server.js"
     },
     "repository": {
         "type": "git",
@@ -18,7 +20,7 @@
     },
     "homepage": "https://github.com/priyanshiisingh/Full_stack_webdev#readme",
     "dependencies": {
-        "axios": "^0.22.0",
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "nodemon": "^2.0.13"
     }
 }
