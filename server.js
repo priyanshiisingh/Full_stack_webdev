@@ -3,7 +3,24 @@ const app = express()
 
 app.use(express.json())
 
+const token = "top_secret"
 let products = [{ name: 'iPhone12 Case', price: '999' }, { name: 'iPhone13 Case', price: '1199' }, { name: 'iPhone13 Pro Case', price: '1499' }]
+
+//-------------------authentication route--------------
+app.post('/auth', (req, res) => {
+    const { email, pwd } = req.body
+
+    if (email === 'admin@gmail.com' && pwd === 'password') {
+        res.send({ token })
+    } else {
+        res.send({ message: 'UNAUTHORISED' })
+    }
+})
+
+const isauthorised = (req, res, next) => {
+    if (req.headers.authorisation === token) next()
+    else res.json({ error: "unauthorised" })
+}
 
 //-------------------validation middleware--------------
 
@@ -13,7 +30,6 @@ const validator = (req, res, next) => {
     else next()
 }
 
-
 //-------------------public routes--------------
 //GET route 
 //send arr of products 
@@ -22,7 +38,7 @@ app.get('/products', (req, res) => {
 })
 
 //-------------------private routes--------------
-app.post('/products/add', validator, (req, res) => {
+app.post('/products/add', isauthorised, validator, (req, res) => {
     const { name, price } = req.body
 
     products.push({
