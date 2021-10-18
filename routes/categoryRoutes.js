@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const database = require('../database/db')
 
-router.get('/all', () => {
+router.get('/all', (req, res) => {
     try {
         res.json({
             categories: database.categories,
