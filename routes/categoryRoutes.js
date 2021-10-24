@@ -63,7 +63,7 @@ METHOD : DELETE
 
 router.delete('/delete/:id', (req, res) => {
     try {
-        const { id } = req.body
+        const { id } = req.params
             // let element = database.categories.find(item => { item.id === id })
             // const index = database.categories.indexOf(element)
             // database.categories.splice(index, 1)
