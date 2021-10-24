@@ -34,11 +34,13 @@ router.post('/add', (req, res) => {
     const { name, price, categoryName } = req.body
 
     if (!database.categories.find(item => item.id === categoryName)) {
+        // if category doesn't exsits create new 
         let newcategory = { name: categoryName, id: uuidv4 }
         database.categories.push(newcategory)
         const newproduct = { id: uuidv4, name, price, category: categoryName }
         database.products.push(newproduct)
     } else {
+        //if category exsits just push item into the category
         const newproduct = { id: uuidv4, name, price, category: categoryName }
         database.products.push(newproduct)
     }
