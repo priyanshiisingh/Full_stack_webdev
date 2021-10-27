@@ -2,18 +2,18 @@ const container = document.getElementById('app')
     // console.log(container)
 
 
-const jsx = <
-    ul >
-    <
-    li > heading < /li> <
-    li > heading < /li> <
-    li > heading < /li> <
-    li > heading < /li> <
-    ul >
-    <
-    li > sdf < /li> <
-    /ul> <
-    /ul>
+// const jsx = <
+// ul >
+// <
+// li > heading < /li> <
+// li > heading < /li> <
+// li > heading < /li> <
+// li > heading < /li> <
+// ul >
+// <
+// li > sdf < /li> <
+// /ul> <
+// /ul>
 
 
 
