@@ -16,8 +16,12 @@
 
     <title>Bootstrap</title>
     <style>
-        div {
-            min-height: 50px;
+        div.row {
+            background-color: black;
+        }
+        
+        div.row div {
+            background-color: #ffbf00;
         }
     </style>
 </head>
@@ -25,16 +29,33 @@
 <!---->
 
 <body>
-    <!-- <div class="bg-dark text-light container-fluid container-xxl">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe assumenda qui blanditiis ab cumque ipsum tempore odio! Deserunt suscipit, facere veritatis obcaecati natus impedit ullam incidunt tenetur modi nisi velit.
-    </div>
-    <div class="container text-dark bg-info text-capitalize text-end container-xs">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio incidunt cumque reprehenderit veniam obcaecati facilis laudantium tenetur quos autem laborum.
-    </div> -->
-    <p class="h1 border border-5 border-info mx-5">p trying to be h1</p>
-    <div class="container w-50 bg-danger">
-        <div class="w-25 bg-info d-inline-block m-2"></div>
-        <div class="w-25 bg-info d-md-inline-block d-none m-2"></div>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-3 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-9 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-2 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-10 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-6 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-2 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-1 border border-2 border-info">
+                One of three columns
+            </div>
+            <div class="col-3 border border-2 border-info">
+                One of three columns
+            </div>
+        </div>
     </div>
 </body>
 
